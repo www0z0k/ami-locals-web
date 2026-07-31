@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en" data-ami-page="character-concepts-v0.11">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AMI Locals combat concepts, character presets, skills, resources, and v0.11 stat guide.">
+  <title>AMI Locals — Combat Concepts &amp; Stat Guide</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f3eee2;
+      --muted: #b9b7ad;
+      --dim: #898b86;
+      --paper: #111715;
+      --panel: rgba(27, 36, 32, 0.9);
+      --panel-strong: #202a25;
+      --line: rgba(223, 211, 177, 0.18);
+      --moss: #8fa77d;
+      --sand: #cdbb8e;
+      --sea: #6fa7a2;
+      --ember: #d97b57;
+      --violet: #aa90d4;
+      --gold: #d1a955;
+      --radius: 18px;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font: 16px/1.62 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 12% 4%, rgba(111, 167, 162, 0.15), transparent 28rem),
+        radial-gradient(circle at 86% 18%, rgba(205, 187, 142, 0.1), transparent 31rem),
+        linear-gradient(180deg, #101614 0%, #141b18 58%, #0d1210 100%);
+    }
+
+    a { color: #c8ded9; }
+    a:hover { color: #fff; }
+
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 88px 0 64px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -12% -8rem 45%;
+      height: 18rem;
+      pointer-events: none;
+      transform: rotate(-4deg);
+      border: 1px solid rgba(205, 187, 142, 0.12);
+      border-radius: 50%;
+      box-shadow: 0 0 90px rgba(111, 167, 162, 0.09) inset;
+    }
+
+    .eyebrow,
+    .kicker {
+      margin: 0 0 12px;
+      color: var(--sand);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p { margin-top: 0; }
+
+    h1 {
+      max-width: 850px;
+      margin-bottom: 20px;
+      font-size: clamp(2.65rem, 7vw, 5.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+
+    h2 {
+      margin-bottom: 14px;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 1.14rem;
+      line-height: 1.25;
+    }
+
+    .lede {
+      max-width: 760px;
+      margin-bottom: 28px;
+      color: #d2d1c8;
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+    }
+
+    .status-row,
+    .tags,
+    .mini-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .pill,
+    .tag,
+    .mini-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 6px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.035);
+      color: #d7d6ce;
+      font-size: 0.78rem;
+      font-weight: 750;
+      letter-spacing: 0.035em;
+      text-decoration: none;
+    }
+
+    .mini-nav { margin-top: 24px; }
+    .mini-nav a:hover { border-color: rgba(200, 222, 217, 0.6); }
+
+    main { padding-bottom: 80px; }
+
+    section {
+      padding: 72px 0 0;
+      scroll-margin-top: 24px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+      gap: 44px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    .section-note {
+      margin-bottom: 4px;
+      color: var(--muted);
+    }
+
+    .card,
+    .role,
+    .callout {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, rgba(35, 46, 41, 0.92), rgba(23, 31, 27, 0.9));
+      box-shadow: var(--shadow);
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .principles .card { padding: 24px; }
+    .principles p { margin-bottom: 0; color: var(--muted); }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .stat {
+      min-height: 168px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.028);
+    }
+
+    .stat-code {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--sand);
+      font: 800 0.86rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+      letter-spacing: 0.12em;
+    }
+
+    .stat p { margin-bottom: 0; color: var(--muted); }
+
+    .formula {
+      margin: 20px 0 0;
+      padding: 22px 24px;
+      border-left: 3px solid var(--moss);
+      border-radius: 4px var(--radius) var(--radius) 4px;
+      background: rgba(143, 167, 125, 0.08);
+      color: #d8dbcf;
+    }
+
+    .formula strong { color: #fff; }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .resource {
+      padding: 18px;
+      border-top: 2px solid var(--sea);
+      background: rgba(255, 255, 255, 0.026);
+    }
+
+    .resource p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .roles {
+      display: grid;
+      gap: 22px;
+    }
+
+    .role {
+      position: relative;
+      overflow: hidden;
+      padding: 30px;
+    }
+
+    .role::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent, var(--moss));
+    }
+
+    .role.tank { --accent: var(--gold); }
+    .role.archer { --accent: var(--moss); }
+    .role.mage { --accent: var(--violet); }
+    .role.fury { --accent: var(--ember); }
+
+    .role-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+
+    .role-title {
+      display: flex;
+      gap: 14px;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+
+    .role-title h2 { margin: 0; }
+
+    .role-index {
+      color: var(--accent);
+      font: 800 0.82rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+    }
+
+    .role-subtitle {
+      max-width: 690px;
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .attribute-line {
+      padding: 10px 12px;
+      border: 1px solid color-mix(in srgb, var(--accent) 48%, transparent);
+      border-radius: 10px;
+      color: #eee9dc;
+      font: 750 0.78rem/1.45 ui-monospace, SFMono-Regular, Consolas, monospace;
+      white-space: nowrap;
+    }
+
+    .role-body {
+      display: grid;
+      grid-template-columns: minmax(230px, 0.75fr) minmax(0, 1.25fr);
+      gap: 30px;
+    }
+
+    .loop {
+      padding: 20px;
+      border-radius: 13px;
+      background: color-mix(in srgb, var(--accent) 9%, transparent);
+    }
+
+    .loop p:last-child { margin-bottom: 0; }
+
+    .skill-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skill-list li {
+      padding: 14px 15px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.12);
+      color: var(--muted);
+    }
+
+    .skill-list strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--ink);
+    }
+
+    .callout {
+      padding: 28px;
+    }
+
+    .run-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .step {
+      position: relative;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .step-number {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--sea);
+      font: 800 0.76rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+      letter-spacing: 0.12em;
+    }
+
+    .step p:last-child { margin-bottom: 0; color: var(--muted); }
+
+    .fine-print {
+      margin-top: 22px;
+      color: var(--dim);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 30px 0 48px;
+      border-top: 1px solid var(--line);
+      color: var(--dim);
+      font-size: 0.86rem;
+    }
+
+    footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 24px;
+    }
+
+    @media (max-width: 860px) {
+      .section-head,
+      .role-body { grid-template-columns: 1fr; gap: 18px; }
+      .principles,
+      .stats,
+      .run-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .resource-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .role-head { grid-template-columns: 1fr; }
+      .attribute-line { width: max-content; max-width: 100%; white-space: normal; }
+    }
+
+    @media (max-width: 580px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding: 58px 0 46px; }
+      section { padding-top: 54px; }
+      .principles,
+      .stats,
+      .resource-grid,
+      .run-grid,
+      .skill-list { grid-template-columns: 1fr; }
+      .role { padding: 24px 20px; }
+      .role-title { display: block; }
+      .role-index { display: block; margin-bottom: 8px; }
+    }
+
+    @media print {
+      :root { color-scheme: light; --ink: #151a17; --muted: #414843; --dim: #59605b; --line: #c7ccc8; }
+      body { background: white; }
+      .hero { padding-top: 30px; }
+      .card, .role, .callout { box-shadow: none; background: white; break-inside: avoid; }
+      .mini-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="wrap">
+      <p class="eyebrow">AMI Locals · prototype guide</p>
+      <h1>Build a fighter.<br>Choose a route.<br>Beat the Warden.</h1>
+      <p class="lede">A compact guide to the four current combat identities, their signature mechanics, and the shared stat system behind this co-op session PvE RPG prototype.</p>
+      <div class="status-row" aria-label="Prototype status">
+        <span class="pill">Combat math v0.11</span>
+        <span class="pill">4 editable templates</span>
+        <span class="pill">18 free stat points</span>
+        <span class="pill">Session-based PvE</span>
+      </div>
+      <nav class="mini-nav" aria-label="Guide sections">
+        <a href="#idea">Core idea</a>
+        <a href="#stats">Stats</a>
+        <a href="#tank">Tank</a>
+        <a href="#archer">Archer</a>
+        <a href="#mage">Mage</a>
+        <a href="#fury">Fury</a>
+        <a href="#run">The run</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="combat-concepts-guide">
+    <section id="idea">
+      <div class="section-head">
+        <div>
+          <p class="kicker">The core idea</p>
+          <h2>Identity suggests a loop. Stats decide how well you execute it.</h2>
+        </div>
+        <p class="section-note">The current build separates the visual/action preset from editable attributes. The presets below are strong starting shapes, not immutable stat classes.</p>
+      </div>
+
+      <div class="principles">
+        <article class="card">
+          <h3>One shared combat model</h3>
+          <p>Players and mobs use the same pools, recovery, movement, action payment, release snapshot, hit quality, defense, and impact rules.</p>
+        </article>
+        <article class="card">
+          <h3>Resources shape quality</h3>
+          <p>AP is the action gate. Stamina and Focus also affect the quality of physical and resonance execution as their pools run low.</p>
+        </article>
+        <article class="card">
+          <h3>Commitment creates power</h3>
+          <p>Facing, position, timing, stationary casting, and momentum meters matter. Strong results come from creating the right combat state first.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="stats">
+      <div class="section-head">
+        <div>
+          <p class="kicker">General stats</p>
+          <h2>Six attributes, one shared budget.</h2>
+        </div>
+        <p class="section-note">Every attribute starts at 1. You distribute 18 additional points for a legal 24-point character. Each attribute currently has a hard ceiling of 20.</p>
+      </div>
+
+      <div class="stats">
+        <article class="stat">
+          <span class="stat-code">STR</span>
+          <h3>Strength</h3>
+          <p>Builds physical force: the base energy behind arrows, blades, bashes, and Fury attacks.</p>
+        </article>
+        <article class="stat">
+          <span class="stat-code">DEX</span>
+          <h3>Dexterity</h3>
+          <p>Improves physical handling, increases movement speed, and contributes to AP recovery.</p>
+        </article>
+        <article class="stat">
+          <span class="stat-code">PERC</span>
+          <h3>Perception</h3>
+          <p>Raises Focus and AP capacity, expands awareness, and controls both default camera distance and maximum zoom-out.</p>
+        </article>
+        <article class="stat">
+          <span class="stat-code">INT</span>
+          <h3>Intelligence</h3>
+          <p>Builds resonance force: the base energy behind bolts, novas, meteors, and magical healing.</p>
+        </article>
+        <article class="stat">
+          <span class="stat-code">END</span>
+          <h3>Endurance</h3>
+          <p>Raises HP, Stamina, Poise, physical soak, resonance stability, and—together with PERC—maximum AP.</p>
+        </article>
+        <article class="stat">
+          <span class="stat-code">SENS</span>
+          <h3>Sensitivity</h3>
+          <p>Improves resonance handling, contributes to AP recovery, and directly scales maintained Bolt and Support pumping.</p>
+        </article>
+      </div>
+
+      <div class="formula">
+        <strong>The important pairings:</strong> maximum AP comes from <strong>END + PERC</strong>; AP recovery comes from <strong>DEX + SENS</strong>; movement speed follows <strong>DEX</strong>; camera reach follows <strong>PERC</strong>; stationary maintained payload grows by <strong>10% × SENS of its release-time base payload per second</strong>.
+      </div>
+
+      <div class="resource-grid" aria-label="Combat resources">
+        <article class="resource"><h3>HP</h3><p>Survival. END is its main attribute.</p></article>
+        <article class="resource"><h3>AP</h3><p>Required to begin actions; refills while you are not running.</p></article>
+        <article class="resource"><h3>Stamina</h3><p>Physical effort and physical execution quality.</p></article>
+        <article class="resource"><h3>Focus</h3><p>Resonance effort, precision, and maintenance fuel.</p></article>
+        <article class="resource"><h3>Poise</h3><p>Impact tolerance; breaking it causes stagger.</p></article>
+      </div>
+    </section>
+
+    <section id="characters">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Character concepts</p>
+          <h2>Four readable combat identities.</h2>
+        </div>
+        <p class="section-note">Each preset supplies a visual identity, default attributes, and a current prototype action package. Attributes remain editable on the character-generation screen.</p>
+      </div>
+
+      <div class="roles">
+        <article class="role tank" id="tank">
+          <header class="role-head">
+            <div>
+              <div class="role-title"><span class="role-index">01</span><h2>Tank</h2></div>
+              <p class="role-subtitle">A front-facing controller who turns enemy pressure into Guard Mass, then spends the positional advantage on control, protection, and team setup.</p>
+            </div>
+            <div class="attribute-line">STR 7 · DEX 1 · PERC 7 · INT 1 · END 7 · SENS 1</div>
+          </header>
+          <div class="role-body">
+            <div class="loop">
+              <p class="kicker">Signature loop</p>
+              <p>Face the threat, block or advance deliberately, and keep enemies in front. Frontal blocks and successful control build Guard Mass. Running, rear pressure, missed heavy control, and stagger erode it. More Mass strengthens the active guard and improves key control actions.</p>
+            </div>
+            <ul class="skill-list">
+              <li><strong>Stab</strong>Reliable narrow melee pressure and a small Guard Mass gain on contact.</li>
+              <li><strong>Bash</strong>A frontal knockback, slow, stagger, and taunt. Guard Mass expands and strengthens it.</li>
+              <li><strong>Shockwave</strong>Instant nearby taunt and area control; rewards catching several enemies.</li>
+              <li><strong>Hook</strong>A fast narrow projectile that pulls, slows, staggers, and taunts one visible target.</li>
+              <li><strong>Potion</strong>An unlimited 0.9-second delayed heal with an 8-second cooldown.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role archer" id="archer">
+          <header class="role-head">
+            <div>
+              <div class="role-title"><span class="role-index">02</span><h2>Archer</h2></div>
+              <p class="role-subtitle">A mobile physical damage dealer who earns accuracy and impact by creating a safe firing window, then chooses between one precise line and broad projectile coverage.</p>
+            </div>
+            <div class="attribute-line">STR 7 · DEX 7 · PERC 7 · INT 1 · END 1 · SENS 1</div>
+          </header>
+          <div class="role-body">
+            <div class="loop">
+              <p class="kicker">Signature loop</p>
+              <p>Hold Bow while stationary and outside immediate melee pressure. Concentration takes four seconds to fill, narrows the cone, and becomes a parallel precision corridor after 60%. Moving, dodging, nearby pressure, or hostile interruption ruins the prepared shot.</p>
+            </div>
+            <ul class="skill-list">
+              <li><strong>Bow</strong>Charge-and-release shot; charge improves force, quality, speed, and aim precision.</li>
+              <li><strong>Arrow Shower</strong>Choose a ground point for a delayed physical area impact with visible travel.</li>
+              <li><strong>Fan</strong>Fires seven real arrows across a compact spread; coverage comes from projectiles, not a fake cone hitbox.</li>
+              <li><strong>Pin</strong>A focused projectile that heavily slows its enemy target.</li>
+              <li><strong>Support</strong>An emergency ally-healing projectile; it can maintain while stationary, but the default Archer has low SENS.</li>
+              <li><strong>Potion</strong>The shared delayed self-heal and cooldown safety tool.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role mage" id="mage">
+          <header class="role-head">
+            <div>
+              <div class="role-title"><span class="role-index">03</span><h2>Mage</h2></div>
+              <p class="role-subtitle">A fragile resonance specialist who decides whether to keep moving or anchor in place and turn projectile flight time into damage or healing.</p>
+            </div>
+            <div class="attribute-line">STR 1 · DEX 1 · PERC 7 · INT 7 · END 1 · SENS 7</div>
+          </header>
+          <div class="role-body">
+            <div class="loop">
+              <p class="kicker">Signature loop</p>
+              <p>Release Bolt or Support, then simply remain stationary—no button hold is needed. The projectile automatically pumps by 10% × SENS of its own release-time base payload each second and drains 5.25 Focus per second. Movement, dodge, guard, damage, another action, or empty Focus breaks maintenance permanently for that projectile.</p>
+            </div>
+            <ul class="skill-list">
+              <li><strong>Bolt / Resonance</strong>A soft-guided damaging projectile whose payload grows during stationary maintenance.</li>
+              <li><strong>Nova</strong>Instant point-blank resonance area damage; strongest near the caster.</li>
+              <li><strong>Meteor</strong>Place a delayed high-impact resonance area inside line of sight, with visible incoming travel.</li>
+              <li><strong>Support</strong>A soft-guided ally heal. It starts at 60% of its unpumped release payload and uses the same SENS pump rule.</li>
+              <li><strong>Self Heal</strong>Converts a resonance release into immediate personal healing.</li>
+              <li><strong>Potion</strong>A separate delayed percentage-or-flat heal on cooldown.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role fury" id="fury">
+          <header class="role-head">
+            <div>
+              <div class="role-title"><span class="role-index">04</span><h2>Fury</h2></div>
+              <p class="role-subtitle">A tempo melee damage dealer who stays alive by keeping a damaging-contact chain alive—not by standing still and trading like a conventional tank.</p>
+            </div>
+            <div class="attribute-line">STR 7 · DEX 7 · PERC 5 · INT 1 · END 3 · SENS 1</div>
+          </header>
+          <div class="role-body">
+            <div class="loop">
+              <p class="kicker">Signature loop</p>
+              <p>Every damaging player contact adds Fury. After a one-second grace period it decays over time. Higher Fury improves the power and AP efficiency of Fury-tagged attacks and supplies scaling damage reduction. Fury Strike accepts repeats at a 30%-shorter interval when AP allows, making sustained contact the heart of the preset.</p>
+            </div>
+            <ul class="skill-list">
+              <li><strong>Fury Strike</strong>Fast targeted melee pressure with a small forward close; the chain-building basic action.</li>
+              <li><strong>Deadly One</strong>A narrow, high-commitment single-target finishing strike powered by current Fury.</li>
+              <li><strong>Deadly AOE</strong>A circular finishing sweep whose reach grows with current Fury.</li>
+              <li><strong>Dash</strong>A short directional rush that stops and strikes on first body contact; if clear, it ends in a free Fury Strike.</li>
+              <li><strong>Potion</strong>The common delayed recovery tool for resetting between dangerous engagements.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="run">
+      <div class="section-head">
+        <div>
+          <p class="kicker">The current PvE run</p>
+          <h2>One choice, one corridor, one boss.</h2>
+        </div>
+        <p class="section-note">Both enemy cohorts exist from the start. Entering a corridor commits the session, wakes that route, and leaves the other route dormant.</p>
+      </div>
+
+      <div class="run-grid">
+        <article class="step">
+          <span class="step-number">ROUTE A</span>
+          <h3>SWARM</h3>
+          <p>Many weaker mobs. Tests area control, projectile coverage, positioning, and the team's ability to avoid being surrounded.</p>
+        </article>
+        <article class="step">
+          <span class="step-number">ROUTE B</span>
+          <h3>ELITE</h3>
+          <p>Fewer stronger mobs. Tests control timing, focused damage, resource discipline, and surviving heavier individual contacts.</p>
+        </article>
+        <article class="step">
+          <span class="step-number">FINISH</span>
+          <h3>Gate Warden</h3>
+          <p>Cleaning the selected route opens the boss chamber. Defeat the Warden to complete the prototype run.</p>
+        </article>
+      </div>
+
+      <div class="callout" style="margin-top: 22px;">
+        <p class="kicker">Enemy math</p>
+        <h3>Mobs follow the same rules, with sturdier budgets.</h3>
+        <p style="margin-bottom: 0; color: var(--muted);">Mob 1 is the physical damage dealer, Mob 2 the Tank, and Mob 3 the Mage. Common mobs use 21 free points / 27 total—three more than players, placed into END. Specialist and boss tiers add further END or a DEX/END package, while their outgoing PvE impact is separately scaled for the encounter tier.</p>
+      </div>
+
+      <p class="fine-print">Prototype scope: session combat, route choice, boss, death, and respawn. Persistence, economy, gear drops, monetization, and permanent power are intentionally outside this release. Names, values, and balance remain work in progress.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>AMI Locals · Combat concepts &amp; stat guide</span>
+      <span>Current prototype rules · combat math v0.11</span>
+    </div>
+  </footer>
+</body>
+</html>
