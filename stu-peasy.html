@@ -52,12 +52,13 @@
       }
 
       var buildUrl = "stu-peasy/Build";
-      var loaderUrl = buildUrl + "/WebGL.loader.js";
+      var buildVersion = "fe641ea";
+      var loaderUrl = buildUrl + "/WebGL.loader.js?v=" + buildVersion;
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/WebGL.data.unityweb",
-        frameworkUrl: buildUrl + "/WebGL.framework.js.unityweb",
-        codeUrl: buildUrl + "/WebGL.wasm.unityweb",
+        dataUrl: buildUrl + "/WebGL.data.unityweb?v=" + buildVersion,
+        frameworkUrl: buildUrl + "/WebGL.framework.js.unityweb?v=" + buildVersion,
+        codeUrl: buildUrl + "/WebGL.wasm.unityweb?v=" + buildVersion,
         streamingAssetsUrl: "stu-peasy/StreamingAssets",
         companyName: "StuPeasy",
         productName: "StuPeasy Radial Incremental RPG",
