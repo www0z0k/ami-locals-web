@@ -6,8 +6,8 @@
     <meta name="theme-color" content="#10151d">
     <title>StuPeasy Radial Incremental RPG</title>
     <style>
-      html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #10151d; touch-action: none; }
-      #unity-canvas { position: fixed; inset: 0; width: 100vw !important; height: 100vh !important; background: #1F1F20; outline: none; }
+      html, body { width: 100%; height: 100vh; height: 100dvh; margin: 0; overflow: hidden; background: #10151d; touch-action: none; }
+      #unity-canvas { position: fixed; inset: 0; width: 100vw !important; height: 100vh !important; height: 100dvh !important; background: #1F1F20; outline: none; }
       #loading { position: fixed; left: 15%; right: 15%; top: 50%; height: 8px; transform: translateY(-50%); background: #1c2633; border: 2px solid #05070a; z-index: 2; }
       #progress { width: 0; height: 100%; background: #29dc69; }
       #warning { position: fixed; left: 8px; right: 8px; top: 8px; z-index: 3; color: #fff; font: 700 14px sans-serif; text-shadow: 1px 1px #000; }
@@ -17,7 +17,7 @@
     <canvas id="unity-canvas" width=540 height=960 tabindex="-1"></canvas>
     <div id="loading"><div id="progress"></div></div>
     <div id="warning"></div>
-  <script src="stu-peasy/Build/WebGL.loader.js?v=9dfdaf5"></script>
+  <script src="stu-peasy/Build/WebGL.loader.js?v=090036f"></script>
     <script>
       const canvas = document.querySelector("#unity-canvas");
       const loading = document.querySelector("#loading");
