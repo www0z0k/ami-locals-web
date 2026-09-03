@@ -17,9 +17,16 @@
     <canvas id="unity-canvas" width=540 height=960 tabindex="-1"></canvas>
     <div id="loading"><div id="progress"></div></div>
     <div id="warning"></div>
-    <script src="stu-peasy-beta/Build/WebGL.loader.js?v=20260903011029"></script>
+    <script src="stu-peasy-beta/Build/WebGL.loader.js?v=20260903135021"></script>
     <script>
       const canvas = document.querySelector("#unity-canvas");
+      let unityInstance = null;
+      canvas.addEventListener("wheel", event => {
+        if (!event.ctrlKey) return;
+        event.preventDefault();
+        const deltaUnit = event.deltaMode === 1 ? 40 : (event.deltaMode === 2 ? canvas.clientHeight : 1);
+        unityInstance?.SendMessage("Main Camera", "ApplyDebugZoomScroll", -event.deltaY * deltaUnit);
+      }, { passive: false });
       const loading = document.querySelector("#loading");
       const progress = document.querySelector("#progress");
       const warning = document.querySelector("#warning");
@@ -33,9 +40,9 @@
       };
       createUnityInstance(canvas, {
         arguments: [],
-        dataUrl: "stu-peasy-beta/Build/WebGL.data.unityweb?v=20260903011029",
-        frameworkUrl: "stu-peasy-beta/Build/WebGL.framework.js.unityweb?v=20260903011029",
-        codeUrl: "stu-peasy-beta/Build/WebGL.wasm.unityweb?v=20260903011029",
+        dataUrl: "stu-peasy-beta/Build/WebGL.data.unityweb?v=20260903135021",
+        frameworkUrl: "stu-peasy-beta/Build/WebGL.framework.js.unityweb?v=20260903135021",
+        codeUrl: "stu-peasy-beta/Build/WebGL.wasm.unityweb?v=20260903135021",
         streamingAssetsUrl: "stu-peasy-beta/StreamingAssets",
         companyName: "StuPeasy",
         productName: "StuPeasy Beta",
@@ -43,7 +50,10 @@
         autoSyncPersistentDataPath: true,
         showBanner
       }, value => progress.style.width = `${Math.round(value * 100)}%`)
-        .then(() => loading.remove())
+        .then(instance => {
+          unityInstance = instance;
+          loading.remove();
+        })
         .catch(message => showBanner(message, "error"));
     </script>
   </body>
