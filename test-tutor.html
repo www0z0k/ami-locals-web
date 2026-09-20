@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#10151d">
-    <meta name="stupeasy-release" content="20260920171144">
+    <meta name="stupeasy-release" content="20260921001241">
     <meta name="stupeasy-source-commit" content="86f68843da6aa8ebaba02054193f2942d03f8861">
-    <title>StuPeasy Tutorial Test</title>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <meta name="stupeasy-source-state" content="dirty-uncommitted-test-build">
+    <link rel="icon" type="image/png" href="test-tutor/favicon.png">
+    <link rel="apple-touch-icon" href="test-tutor/favicon.png">
+    <title>StuPeasy Radial Incremental RPG</title>
     <style>
       html, body { width: 100%; height: 100vh; height: 100dvh; margin: 0; overflow: hidden; background: #10151d; touch-action: none; }
       #unity-canvas { position: fixed; inset: 0; width: 100vw !important; height: 100vh !important; height: 100dvh !important; background: #1F1F20; outline: none; }
@@ -20,7 +22,8 @@
     <canvas id="unity-canvas" width=540 height=960 tabindex="-1"></canvas>
     <div id="loading"><div id="progress"></div></div>
     <div id="warning"></div>
-    <script src="test-tutor/Build/WebGL.loader.js?v=20260920171144"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="test-tutor/Build/WebGL.loader.js?v=20260921001241"></script>
     <script>
       const canvas = document.querySelector("#unity-canvas");
       let unityInstance = null;
@@ -43,13 +46,13 @@
       };
       createUnityInstance(canvas, {
         arguments: [],
-        dataUrl: "test-tutor/Build/WebGL.data.unityweb?v=20260920171144",
-        frameworkUrl: "test-tutor/Build/WebGL.framework.js.unityweb?v=20260920171144",
-        codeUrl: "test-tutor/Build/WebGL.wasm.unityweb?v=20260920171144",
+        dataUrl: "test-tutor/Build/WebGL.data.unityweb?v=20260921001241",
+        frameworkUrl: "test-tutor/Build/WebGL.framework.js.unityweb?v=20260921001241",
+        codeUrl: "test-tutor/Build/WebGL.wasm.unityweb?v=20260921001241",
         streamingAssetsUrl: "test-tutor/StreamingAssets",
         companyName: "StuPeasy",
-        productName: "StuPeasy Tutorial Test",
-        productVersion: "0.1.0-test-tutor",
+        productName: "StuPeasy Radial Incremental RPG",
+        productVersion: "0.1.0",
         autoSyncPersistentDataPath: true,
         showBanner
       }, value => progress.style.width = `${Math.round(value * 100)}%`)
