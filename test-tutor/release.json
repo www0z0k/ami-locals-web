@@ -1,0 +1,27 @@
+{
+  "version": "20261002220505",
+  "sourceCommit": "de358502feed53b0be59b31eb969216ce188d403",
+  "serverUrl": "https://spherefarer-mp-test-20260925.onrender.com",
+  "artifacts": [
+    {
+      "name": "WebGL.data.unityweb",
+      "bytes": 65866060,
+      "sha256": "0aa55987ec5539a49b5bf6ff3495d2a341a340d1a5eaa89919766c226954dc4a"
+    },
+    {
+      "name": "WebGL.framework.js.unityweb",
+      "bytes": 80297,
+      "sha256": "2f8fc2977a96cd94bea78eb983efd722eef4c94182b972b4e2717d6d1ae3f496"
+    },
+    {
+      "name": "WebGL.loader.js",
+      "bytes": 48105,
+      "sha256": "2c44706ab9885d3d9cd9d53f03aaa05b7e99fea998d1858a80b4ebc8e18ef19c"
+    },
+    {
+      "name": "WebGL.wasm.unityweb",
+      "bytes": 11513259,
+      "sha256": "d16bb671b5991acb59e6e3aff4151a1d85f0dc0cfaa3ca64143f3832e4f2df06"
+    }
+  ]
+}
