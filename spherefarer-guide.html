@@ -9,6 +9,7 @@
   <style>
     :root{--bg:#0c1318;--panel:#131e25;--panel2:#1a2932;--ink:#eef2ed;--muted:#b1bfbf;--line:#30414a;--gold:#ffcf72;--mint:#91e0c6;--blue:#a4c9ff;--radius:16px}
     *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:var(--mint);text-underline-offset:4px}button,input{font:inherit}button{cursor:pointer}button,a,input{touch-action:manipulation}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--gold);outline-offset:4px}button{color:var(--ink);border:1px solid var(--line);background:var(--panel2);border-radius:9px;min-height:44px;padding:8px 14px}button:hover{border-color:var(--gold)}button[aria-pressed=true],button[aria-selected=true]{background:var(--gold);color:#171d1e;border-color:var(--gold)}.skip{position:fixed;top:-100px;left:12px;z-index:30;background:var(--gold);color:#111;padding:12px}.skip:focus{top:12px}.bar{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:#0c1318f5;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px max(20px,calc((100vw - 1420px)/2))}.brand{font-weight:850;letter-spacing:.09em;font-size:18px;color:var(--gold);text-decoration:none}.bar-tools{display:flex;gap:8px;align-items:center}.language{display:flex;gap:4px}.language button{padding:7px 12px}.layout{max-width:1420px;margin:auto;padding:38px 24px 70px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:46px}.sidebar{position:sticky;top:95px;align-self:start;max-height:calc(100vh - 115px);overflow:auto}.nav-caption{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}.sidebar a{display:block;padding:7px 10px;text-decoration:none;border-left:2px solid transparent;color:var(--muted);line-height:1.5}.sidebar a:hover,.sidebar a[aria-current=true]{color:var(--gold);border-left-color:var(--gold);background:var(--panel)}main{min-width:0}.hero{padding:30px 34px;background:linear-gradient(125deg,#213b39,#17252e 67%);border:1px solid #38564d;border-radius:var(--radius);position:relative;overflow:hidden}.eyebrow{font-size:12px;letter-spacing:.16em;font-weight:750;color:var(--mint);text-transform:uppercase}.hero h1{font-size:clamp(32px,5vw,56px);line-height:1.12;letter-spacing:-.04em;margin:16px 0}.hero p{max-width:700px;color:#d8e5df}.hero .meta{font-size:13px;color:var(--muted);margin-bottom:0}.hero-links{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 12px}.hero-links a{border:1px solid #496058;border-radius:8px;padding:9px 15px;text-decoration:none}.hero-links a:first-child{background:var(--gold);border-color:var(--gold);color:#17201f;font-weight:700}.section{margin-top:54px;border-top:1px solid var(--line);padding-top:28px}.section-head{display:flex;gap:14px;align-items:baseline}.section-number{font:700 13px/1.5 ui-monospace,monospace;color:var(--gold)}h2{font-size:28px;line-height:1.25;letter-spacing:-.025em;margin:0 0 20px}h3{font-size:19px;line-height:1.4;margin:0 0 10px;color:var(--gold)}h4{font-size:16px;margin:16px 0 6px}p{margin:0 0 13px}.lead{color:var(--muted);max-width:850px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px;min-width:0}.card p:last-child{margin-bottom:0}.wide{grid-column:1/-1}.callout{border-left:3px solid var(--mint);background:#172a29;padding:14px 18px;margin:20px 0;border-radius:0 10px 10px 0}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px;margin:18px 0}table{border-collapse:collapse;width:100%;text-align:left;font-size:14px}caption{padding:12px 16px;text-align:left;color:var(--gold);font-weight:700;background:var(--panel)}th,td{padding:12px 16px;vertical-align:top;border-bottom:1px solid var(--line)}thead{background:var(--panel2)}tbody tr:last-child td{border-bottom:0}th{font-weight:650}td:first-child{font-weight:650;color:var(--gold)}.tablist{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 18px}.tabpanel{background:#0f1a20;border:1px solid #40544f;border-radius:var(--radius);padding:24px}.tabpanel[hidden]{display:none}.weapon-head{display:flex;gap:18px;align-items:center;margin-bottom:18px}.weapon-symbol{font-size:28px;width:54px;height:54px;display:grid;place-items:center;background:var(--panel2);border-radius:12px;color:var(--mint);font-family:ui-monospace,monospace}.weapon-head h3{margin:0;font-size:24px}.weapon-head p{margin:3px 0 0;color:var(--muted);font-size:14px}.recipes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.recipe{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}.recipe h4{color:var(--gold);margin:0 0 10px;font-size:17px}.recipe-body{display:flex;gap:16px;align-items:start}.recipe-body p{margin:0;font-size:14px}.grid{display:grid;grid-template-columns:repeat(3,26px);gap:3px;flex-shrink:0}.cell{width:26px;height:26px;display:grid;place-items:center;border-radius:4px;background:#25353e;color:#71858c;font:bold 13px/1 ui-monospace,monospace}.cell.base{background:var(--gold);color:#131b1d}.cell.required{background:#75c8b2;color:#112420}.cell.optional{color:var(--mint);border:1px dashed var(--mint);background:transparent}.legend{font-size:13px;color:var(--muted);margin:12px 0 20px}.chain{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.chain span{padding:5px 9px;border:1px solid var(--line);border-radius:6px;font-size:13px;color:var(--mint)}ul,ol{padding-left:22px;margin:12px 0}li{margin:6px 0}code,kbd{font:13px ui-monospace,monospace;background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:2px 5px}.pill{display:inline-block;background:var(--panel2);color:var(--mint);padding:3px 9px;border-radius:20px;font-size:12px;margin-bottom:10px}details{border:1px solid var(--line);border-radius:12px;margin:12px 0;padding:14px 18px;background:var(--panel)}summary{cursor:pointer;font-weight:700;color:var(--gold)}details p{margin:12px 0 0}.footer{margin-top:36px;font-size:13px;color:var(--muted)}.top-link{display:inline-block;margin-top:16px}.nojs{padding:20px;max-width:900px;margin:auto}.mobile-nav{display:none}.source-list{font-size:13px;overflow-wrap:anywhere}.support-table td:nth-child(2),.support-table td:nth-child(3){white-space:nowrap}
+    .formula{white-space:pre-wrap;overflow-wrap:anywhere;background:#0b151b;border:1px solid var(--line);border-left:3px solid var(--mint);padding:16px;border-radius:8px;font:14px/1.8 ui-monospace,monospace}.formula code{border:0;background:none;padding:0;font:inherit}
     @media(max-width:1050px){.layout{grid-template-columns:180px minmax(0,1fr);gap:26px}.recipes{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.wide{grid-column:auto}.hero{padding:24px}}
     @media(max-width:750px){html{scroll-padding-top:88px}.bar{padding:10px 14px;gap:8px}.brand{font-size:14px}.print-button{display:none}.layout{display:block;padding:22px 16px 50px}.sidebar{display:none}.mobile-nav{display:block;margin-bottom:20px}.mobile-nav nav{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px}.mobile-nav a{padding:5px;text-decoration:none;font-size:14px}.hero{padding:22px}.hero h1{font-size:36px}.section{margin-top:36px;padding-top:22px}h2{font-size:25px}.card,.tabpanel{padding:18px}.recipe{padding:14px}.recipe-body{gap:12px}.tablist{gap:6px}.tablist button{padding:8px 10px;font-size:14px}.hero-links a{font-size:14px}.table-wrap{margin-left:0;margin-right:0}th,td{padding:10px 12px}.section-head{gap:10px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -134,9 +135,9 @@
   };
   const weapons = [
     {id:'dagger',name:['Кинжал','Dagger'],symbol:'╱',kind:['Мили · частые короткие удары','Melee · frequent short strikes'],intro:['Быстрая мили-база. Действия распространяются от поражённого врага; движение и выбор дистанции остаются твоей задачей.','A fast melee base. Actions spread from the struck enemy; movement and positioning remain your job.'],bias:['В Reforge кинжалы склоняют ролл к скорости атаки, яду и крит-шансу, а мили-катализаторы также к дэш-бонусам и процентному HP/регену. Это веса вероятности, не гарантия.','In Reforge, Daggers bias toward attack speed, Poison, and crit chance; melee catalysts also favor Dash and percentage HP/regen. These are probability weights, not guarantees.'],effects:meleeEffects},
-    {id:'sword',name:['Меч','Sword'],symbol:'†',kind:['Мили · баланс удара и скорости','Melee · balanced strike and speed'],intro:['Та же физика цепочки, что у других мили-баз, но собственные параметры атаки и ролл аффиксов. Рецепт не превращает меч в дальнобойное оружие.','Uses the same chain geometry as other melee bases, with its own attack stats and affix roll. A recipe does not turn a Sword into a ranged weapon.'],bias:['В Reforge мечи склоняют ролл к Melee, крит-урону и блоку. При Pattern Forge мечи влияют на сохранение урона узла; фиксированные коэффициенты Split / Wall / Cone всё равно действуют.','In Reforge, Swords bias toward Melee, crit damage, and Block. In Pattern Forge they influence node retention; the fixed Split / Wall / Cone multipliers still apply.'],effects:meleeEffects},
-    {id:'hammer',name:['Молот','Hammer'],symbol:'┳',kind:['Мили · тяжёлый редкий удар','Melee · heavy, slower strikes'],intro:['Тяжёлая мили-база. Для цепочки важны исходный удар, направление и доступные цели рядом, а не только цифра DPS.','A heavy melee base. Chains depend on the initial hit, direction, and nearby targets, not just the DPS number.'],bias:['В Reforge молоты склоняют ролл к блоку и оглушению. В Pattern Forge их состав усиливает ударные параметры узлов.','In Reforge, Hammers bias toward Block and Stun. In Pattern Forge their composition strengthens impact-related node parameters.'],effects:meleeEffects},
-    {id:'bow',name:['Лук','Bow'],symbol:')➜',kind:['Рендж · физические стрелы','Ranged · physical arrows'],intro:['Цепочка запускается от попадания реальной стрелы. Новые ветви летят и должны попасть в противника — эффект не мгновенно наносит урон всем нарисованным целям.','The chain starts when a real arrow hits. New branches travel and must hit an enemy; the visual effect does not instantly damage every apparent target.'],bias:['В Reforge луки склоняют ролл к Ranged, Coverage и крит-шансу. В Pattern Forge влияют на снарядные параметры.','In Reforge, Bows bias toward Ranged, Coverage, and crit chance. In Pattern Forge they influence projectile parameters.'],effects:{
+    {id:'sword',name:['Меч','Sword'],symbol:'†',kind:['Мили · баланс удара и скорости','Melee · balanced strike and speed'],intro:['Та же физика цепочки, что у других мили-баз, но собственные параметры атаки и ролл аффиксов. Рецепт не превращает меч в дальнобойное оружие.','Uses the same chain geometry as other melee bases, with its own attack stats and affix roll. A recipe does not turn a Sword into a ranged weapon.'],bias:["В Reforge мечи склоняют ролл к Melee, крит-урону и блоку. Параметры Pattern Forge зависят от рисунка и полного Lineage; отдельного скалярного бонуса от этой базы катализатора сейчас нет.", "In Reforge, Swords bias toward Melee, crit damage, and Block. Pattern Forge parameters depend on the layout and total Lineage; this catalyst base currently adds no separate scalar bonus."],effects:meleeEffects},
+    {id:'hammer',name:['Молот','Hammer'],symbol:'┳',kind:['Мили · тяжёлый редкий удар','Melee · heavy, slower strikes'],intro:['Тяжёлая мили-база. Для цепочки важны исходный удар, направление и доступные цели рядом, а не только цифра DPS.','A heavy melee base. Chains depend on the initial hit, direction, and nearby targets, not just the DPS number.'],bias:["В Reforge молоты склоняют ролл к блоку и оглушению. Параметры Pattern Forge зависят от рисунка и полного Lineage; отдельного скалярного бонуса от этой базы катализатора сейчас нет.", "In Reforge, Hammers bias toward Block and Stun. Pattern Forge parameters depend on the layout and total Lineage; this catalyst base currently adds no separate scalar bonus."],effects:meleeEffects},
+    {id:'bow',name:['Лук','Bow'],symbol:')➜',kind:['Рендж · физические стрелы','Ranged · physical arrows'],intro:['Цепочка запускается от попадания реальной стрелы. Новые ветви летят и должны попасть в противника — эффект не мгновенно наносит урон всем нарисованным целям.','The chain starts when a real arrow hits. New branches travel and must hit an enemy; the visual effect does not instantly damage every apparent target.'],bias:["В Reforge луки склоняют ролл к Ranged, Coverage и крит-шансу. Параметры Pattern Forge зависят от рисунка и полного Lineage; отдельного скалярного бонуса от этой базы катализатора сейчас нет.", "In Reforge, Bows bias toward Ranged, Coverage, and crit chance. Pattern Forge parameters depend on the layout and total Lineage; this catalyst base currently adds no separate scalar bonus."],effects:{
       drive:['Стрела пробивает ровно указанное число ДОПОЛНИТЕЛЬНЫХ врагов. Pierce I — одна цель после первой; это не бесконечный пирс.','An arrow pierces exactly the listed number of ADDITIONAL enemies. Pierce I permits one target after the first; it is not unlimited piercing.'],
       split:['Из попадания вылетают две расходящиеся стрелы. Они продолжают цепочку при своих попаданиях.','Two diverging arrows leave the impact. Their own hits carry the remaining chain.'],
       redirect:['Стрела выбирает новую цель и меняет направление. Нужна доступная цель в радиусе узла.','An arrow chooses a new target and redirects toward it. A valid target must be within node range.'],
@@ -145,7 +146,7 @@
       cone:['Из попадания выходит веер стрел вперёд по конусу.','A forward cone of arrows leaves the impact.'],
       aura:['Зубчатый контур на земле вокруг игрока наносит контактный урон периодическими тиками. Это не непрерывная стрельба радиальными стрелами.','A serrated ground contour around the player deals periodic contact damage. It does not continuously fire radial arrows.']
     }},
-    {id:'staff',name:['Посох','Staff'],symbol:'✧',kind:['Магия · болты и поля','Magic · bolts and fields'],intro:['Магический снаряд запускает цепь при попадании. Нова и огненная стенка могут продолжить оставшуюся цепочку на новых целях с задержкой.','A magic projectile starts its chain on impact. Nova and firewall can continue the remaining chain on new targets after a delay.'],bias:['В Reforge посохи склоняют ролл к Magic, крит-урону и Awareness. В Pattern Forge влияют на взрывные параметры и радиус.','In Reforge, Staves bias toward Magic, crit damage, and Awareness. In Pattern Forge they influence burst parameters and radius.'],effects:{
+    {id:'staff',name:['Посох','Staff'],symbol:'✧',kind:['Магия · болты и поля','Magic · bolts and fields'],intro:['Магический снаряд запускает цепь при попадании. Нова и огненная стенка могут продолжить оставшуюся цепочку на новых целях с задержкой.','A magic projectile starts its chain on impact. Nova and firewall can continue the remaining chain on new targets after a delay.'],bias:["В Reforge посохи склоняют ролл к Magic, крит-урону и Awareness. Параметры Pattern Forge зависят от рисунка и полного Lineage; отдельного скалярного бонуса от этой базы катализатора сейчас нет.", "In Reforge, Staves bias toward Magic, crit damage, and Awareness. Pattern Forge parameters depend on the layout and total Lineage; this catalyst base currently adds no separate scalar bonus."],effects:{
       drive:['Болт проходит вперёд сквозь дополнительные цели в пределах заданного количества.','The bolt phases forward through a limited number of additional targets.'],
       split:['Создаёт два болта, изначально направленных на выбранные цели. После запуска они летят без наведения.','Creates two bolts initially aimed at selected targets. After launch they fly unguided.'],
       redirect:['Один более медленный болт с наведением на следующую цель.','One slower guided bolt toward the next target.'],
@@ -154,7 +155,7 @@
       cone:['Заполненный движущийся треугольник магических болтов.','A filled moving triangle of magic bolts.'],
       aura:['Небольшая пульсирующая нова вокруг игрока — постоянное контактное поле.','A small pulsing nova around the player: a persistent contact field.']
     }},
-    {id:'orb',name:['Орб','Orb'],symbol:'◉',kind:['Оффхенд · действия от дэша','Offhand · Dash-triggered actions'],intro:['Орб занимает один из двух оффхенд-слотов. Его обычные бонусы пассивны. Узлы кроме Aura исполняются от реального пути и завершения дэша; Aura действует постоянно.','An Orb uses one of the two offhand slots. Its ordinary bonuses are passive. Nodes other than Aura execute from the actual Dash path and endpoint; Aura remains active continuously.'],bias:['Орбы в Reforge склоняют ролл к Regen, Greed и Awareness. В Pattern Forge влияют на поля и длительность. Орб не имеет собственного оружейного урона.','In Reforge, Orbs bias toward Regen, Greed, and Awareness. In Pattern Forge they influence fields and duration. Orbs have no own weapon damage.'],effects:{
+    {id:'orb',name:['Орб','Orb'],symbol:'◉',kind:['Оффхенд · действия от дэша','Offhand · Dash-triggered actions'],intro:['Орб занимает один из двух оффхенд-слотов. Его обычные бонусы пассивны. Узлы кроме Aura исполняются от реального пути и завершения дэша; Aura действует постоянно.','An Orb uses one of the two offhand slots. Its ordinary bonuses are passive. Nodes other than Aura execute from the actual Dash path and endpoint; Aura remains active continuously.'],bias:["Орбы в Reforge склоняют ролл к Regen, Greed и Awareness. Параметры Pattern Forge зависят от рисунка и полного Lineage; отдельного скалярного бонуса от этой базы катализатора сейчас нет.", "In Reforge, Orbs bias toward Regen, Greed, and Awareness. Pattern Forge parameters depend on the layout and total Lineage; this catalyst base currently adds no separate scalar bonus."],effects:{
       drive:['Поражает тела врагов, реально пересечённые дэшем. Каждая цель получает удар не более одного раза от одного орба за дэш и отдельно продолжает цепь. За концом пройденного пути урона нет.','Hits enemy bodies actually crossed during Dash. Each target is hit at most once per Orb per Dash and independently carries the remaining chain. No damage is projected beyond the traveled path.'],
       split:['Распространяет удар на цели по сторонам от точки завершения дэша.','Spreads a hit to targets on the sides of the Dash endpoint.'],
       redirect:['Переносит удар из точки завершения к соседним доступным врагам.','Redirects the endpoint hit to nearby eligible enemies.'],
@@ -206,7 +207,643 @@
     'Точная доля HP Second Life: clamp(0.25 + 0.05 × log10(Lineage) × Potency, 0.25, 0.90). Поэтому при первом доступном Lineage 3125 и Potency 1 получается примерно 42% HP; 25% — нижняя граница формулы, не обещание силы первого ролла.',
     'Exact Second Life HP fraction: clamp(0.25 + 0.05 × log10(Lineage) × Potency, 0.25, 0.90). At its first available Lineage of 3125 with Potency 1 this is about 42% HP; 25% is the formula floor, not the expected first roll.'
   ]);
+  sections.push({
+  "id": "theorycraft",
+  "title": [
+    "Технический раздел: цифры и формулы",
+    "Theorycraft: numbers and formulas"
+  ],
+  "lead": [
+    "Для расчёта билда: реальная математика предметов, крита, аффиксов, цепочек и саппорта. Читай капы вместе с порядком применения — это часто важнее одной большой цифры.",
+    "For build calculations: actual item, crit, affix, chain, and support math. Read caps together with application order; that often matters more than a single large number."
+  ],
+  "cards": [
+    {
+      "title": [
+        "Обозначения и область расчёта",
+        "Notation and scope"
+      ],
+      "wide": true,
+      "paragraphs": [
+        [
+          "Это текущая реализация на 6 октября 2026, а не обещание будущего баланса. Формулы относятся к обычным предметам без старых коэффициентов миграции и специальных playtest-переопределений. Перевод процентов в доли: 25% = 0.25; время — секунды, дистанция — единицы мира.",
+          "This describes the implementation on 6 October 2026, not a future balance promise. Formulas describe ordinary items without legacy migration calibrations or special playtest overrides. Percentages use fractions: 25% = 0.25; time is in seconds and distance in world units."
+        ],
+        [
+          "L — Lineage предмета; qi — Quality Points конкретного аффикса, а не процент QUALITY на карточке; m — множитель его редкости; clamp(x,a,b) ограничивает x диапазоном [a,b]; floor / ceil округляют вниз / вверх; U(a,b) — случайный ролл в диапазоне. Σ означает сумму подходящих бонусов.",
+          "L is item Lineage; qi is the Quality Points assigned to one affix, not the QUALITY percentage on the card; m is its rarity multiplier; clamp(x,a,b) bounds x to [a,b]; floor / ceil round down / up; U(a,b) is a random roll in that range. Σ sums applicable bonuses."
+        ]
+      ]
+    },
+    {
+      "title": [
+        "Базовый урон и скорость оружия",
+        "Base weapon damage and speed"
+      ],
+      "wide": true,
+      "paragraphs": [
+        [
+          "Стабильный ролл r создаётся вместе с предметом и сохраняется при Temper. Независимый разброс каждого попадания u применяется уже в бою. После достижения базового пола урон растёт линейно от Lineage: старый показатель степени из конфига в этой формуле не используется.",
+          "Stable roll r is created with the item and preserved by Temper. An independent per-hit spread u is applied in combat. Above the base floor, damage grows linearly with Lineage: the old exponent stored in configuration is not used by this formula."
+        ],
+        [
+          "K — коэффициент текущей экономической калибровки. Rpower / Rlineage — ожидаемые скорости получения соответствующего постоянного Class Power и массы на эталонной локации 13. Число экип-слотов — 6. Калибровка знаменателя намеренно использует прежние 5% ролленного дропа элит, а не текущие 10–40%; новый дроп не пересчитывает силу старого Lineage.",
+          "K is the current economic calibration coefficient. Rpower / Rlineage compares expected permanent Class Power income with mass income at reference location 13. Equipment slot count is 6. The denominator deliberately retains the former 5% rolled Elite drop rate, rather than the current 10–40%; new drop rates do not reprice existing Lineage."
+        ]
+      ],
+      "formulas": [
+        "Dweapon = max(Dbase, max(1,L) × K × r)\nr ∈ [0.8,1.2]\nK = (Rpower / Rlineage) × 6 × share\nRpower = G13 × Pclass(13) × (1/300 + 2/900)\nRlineage = (1/900) × 0.95 × 3\nTattack = Tbase / AttackSpeed\nPclass(13) = 10/87\nG13 = 1.2^13 × (4/2.25) × 1.07^6 ≈ 28.545413\nK: Dagger 13.815082; Sword 17.268853; Hammer 24.176394; Bow/Staff 12.088197",
+        "Dweapon = max(Dbase, max(1,L) × K × r)\nr ∈ [0.8,1.2]\nK = (Rpower / Rlineage) × 6 × share\nRpower = G13 × Pclass(13) × (1/300 + 2/900)\nRlineage = (1/900) × 0.95 × 3\nTattack = Tbase / AttackSpeed\nPclass(13) = 10/87\nG13 = 1.2^13 × (4/2.25) × 1.07^6 ≈ 28.545413\nK: Dagger 13.815082; Sword 17.268853; Hammer 24.176394; Bow/Staff 12.088197"
+      ],
+      "table": {
+        "headers": [
+          [
+            "База",
+            "Base"
+          ],
+          [
+            "Dbase",
+            "Dbase"
+          ],
+          [
+            "Tbase, с",
+            "Tbase, s"
+          ],
+          [
+            "share",
+            "share"
+          ],
+          [
+            "Снаряд / волна",
+            "Projectile / wave"
+          ]
+        ],
+        "rows": [
+          [
+            [
+              "Кинжал",
+              "Dagger"
+            ],
+            "35",
+            "0.8",
+            "0.40",
+            [
+              "Глубина 1",
+              "Depth 1"
+            ]
+          ],
+          [
+            [
+              "Меч",
+              "Sword"
+            ],
+            "60",
+            "1.2",
+            "0.50",
+            [
+              "Глубина 2",
+              "Depth 2"
+            ]
+          ],
+          [
+            [
+              "Молот",
+              "Hammer"
+            ],
+            "110",
+            "2.0",
+            "0.70",
+            [
+              "Глубина 3; 50% на 4",
+              "Depth 3; 50% chance of 4"
+            ]
+          ],
+          [
+            [
+              "Лук",
+              "Bow"
+            ],
+            "10",
+            "1.15",
+            "0.35",
+            [
+              "15 ед./с",
+              "15 units/s"
+            ]
+          ],
+          [
+            [
+              "Посох",
+              "Staff"
+            ],
+            "14",
+            "1.55",
+            "0.35",
+            [
+              "10 ед./с",
+              "10 units/s"
+            ]
+          ],
+          [
+            [
+              "Ванд",
+              "Wand"
+            ],
+            "0",
+            [
+              "Хил: КД 3.5",
+              "Heal: CD 3.5"
+            ],
+            "—",
+            [
+              "20 ед./с; без прямого урона",
+              "20 units/s; no direct damage"
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "title": [
+        "Попадание, крит выше 100% и честный DPS",
+        "Hits, crit above 100%, and nominal DPS"
+      ],
+      "wide": true,
+      "paragraphs": [
+        [
+          "ClassPower прибавляется к урону, а не умножает его. Классовый аффикс на оружии действует только на это оружие; на орбе — глобально для соответствующего класса. Крит-шанс экипа глобален, крит-множитель на оружии локален. Множители аффинити: зелёный 1.4, нейтральный 1, красный 0.1.",
+          "Class Power adds to damage rather than multiplying it. A class affix on a weapon affects that weapon; on an Orb it applies globally to that class. Equipment crit chance is global; a weapon crit multiplier is local. Affinity multipliers are green 1.4, neutral 1, and red 0.1."
+        ],
+        [
+          "При C = 2.5 (250%) каждый удар имеет два уровня крита, половина ударов — три. При M = 1.75 ожидаемый множитель = 4.2109375. Наивное «250% шанса на один крит» даёт неправильный DPS.",
+          "At C = 2.5 (250%), every hit has two crit levels and half have three. At M = 1.75 the expected multiplier is 4.2109375. Treating 250% as a chance of one crit gives the wrong DPS."
+        ],
+        [
+          "DPS в статах — нейтральная оценка прямого урона и полного номинального яда за атаку. Она не учитывает Action Chain, резисты, промахи, перелёт, простой, оверкилл и смерть до окончания яда. При оценке реального билда учитывай эти факторы отдельно.",
+          "The Stats DPS is a neutral estimate of direct damage plus the complete nominal poison damage per attack. It excludes Action Chains, affinities, misses, travel, downtime, overkill, and death before poison expires. Account for these separately when evaluating a build."
+        ]
+      ],
+      "formulas": [
+        "Raw = Dweapon + ClassPower\nC = 0.05 + 0.15 × log2(1 + critRating/360) + Σ equipmentCritChance\nk = floor(C) + Bernoulli(C − floor(C))\nHit = Raw × affinity × u × M^k × EmpowerMultiplier\nu ∈ [0.8,1.2]; Mbase = 1.75\nEcrit = M^floor(C) × [1 + frac(C) × (M−1)]\nDPSneutral = Σ [(Raw × Ecrit + flatPoison + Raw × Ecrit × poisonRatio) / Tattack]",
+        "Raw = Dweapon + ClassPower\nC = 0.05 + 0.15 × log2(1 + critRating/360) + Σ equipmentCritChance\nk = floor(C) + Bernoulli(C − floor(C))\nHit = Raw × affinity × u × M^k × EmpowerMultiplier\nu ∈ [0.8,1.2]; Mbase = 1.75\nEcrit = M^floor(C) × [1 + frac(C) × (M−1)]\nDPSneutral = Σ [(Raw × Ecrit + flatPoison + Raw × Ecrit × poisonRatio) / Tattack]"
+      ]
+    },
+    {
+      "title": [
+        "Quality: что именно усиливает Temper",
+        "Quality: what Temper actually improves"
+      ],
+      "wide": true,
+      "paragraphs": [
+        [
+          "Ниже — обычный ролленный профиль, не серый предмет и не ванд. g = 1 для оружия и 2 для орба; pool — число допустимых аффиксов его базы. Ролл Qroll берётся из диапазона Qmin…Qmax с округлением вниз. Сохраняются калибровка c и доли si каждого аффикса; при Temper меняются L и производные значения, но состав, редкости и доли не рероллятся.",
+          "This describes an ordinary rolled profile, not a grey item or a Wand. g = 1 for weapons and 2 for Orbs; pool is the number of affixes allowed for that base. Qroll is drawn from Qmin…Qmax and floored. Calibration c and each affix share si are saved; Temper changes L and derived values, but does not reroll identities, rarities, or shares."
+        ],
+        [
+          "При L = 125: depth = 3, оружейный бюджет 74…111, средний 92.5; обычное число аффиксов 1…4. Для орба бюджет 148…222. Если на оружии c = 1 и два аффикса с равными долями, каждый получает qi = 46.25. Надпись QUALITY = 100% означает c = 1, а не 100 Quality Points.",
+          "At L = 125: depth = 3, weapon budget is 74…111 with mean 92.5; ordinary affix count is 1…4. Orb budget is 148…222. With weapon c = 1 and two equal shares, each affix gets qi = 46.25. QUALITY = 100% means c = 1, not 100 Quality Points."
+        ],
+        [
+          "Гейтбоссовые предметы имеют минимум 4 аффикса, крепостные — 5, в пределах допустимого пула. Сохранившийся узел цепочки имеет собственные параметры ролла: обычный Temper их автоматически не улучшает.",
+          "Gate Boss items have a four-affix floor and Fortress Boss items a five-affix floor, bounded by the allowed pool. Existing chain nodes retain their independently rolled parameters: ordinary Temper does not automatically upgrade them."
+        ]
+      ],
+      "formulas": [
+        "depth = log5(max(1,L))\nQmin = max(1, floor((2 + 24 × depth) × g))\nQmax = max(Qmin, floor(1.5 × Qmin))\nQexpected = (Qmin + Qmax)/2\nc = Qroll / Qexpected_at_creation\nQtotal_now = max(numberOfAffixes, Qexpected_now × c)\nqi = max(0.000001, Qtotal_now × si); Σsi = 1\nQUALITY_display = 100 × c %\nnmin = clamp(floor(0.55 × depth), 1, pool)\nnmax = clamp(ceil(max(1,1.25 × depth)), nmin, pool)",
+        "depth = log5(max(1,L))\nQmin = max(1, floor((2 + 24 × depth) × g))\nQmax = max(Qmin, floor(1.5 × Qmin))\nQexpected = (Qmin + Qmax)/2\nc = Qroll / Qexpected_at_creation\nQtotal_now = max(numberOfAffixes, Qexpected_now × c)\nqi = max(0.000001, Qtotal_now × si); Σsi = 1\nQUALITY_display = 100 × c %\nnmin = clamp(floor(0.55 × depth), 1, pool)\nnmax = clamp(ceil(max(1,1.25 × depth)), nmin, pool)"
+      ]
+    },
+    {
+      "title": [
+        "Редкости и насыщение аффиксов",
+        "Rarity and affix saturation"
+      ],
+      "wide": true,
+      "paragraphs": [
+        [
+          "Множители силы: Common 1; Uncommon 1.12; Rare 1.35; Mythic 1.75. Редкость усиливает qi перед насыщением: она не умножает весь бонус вместе с его нижним порогом. При qi = 80 и Common получаем середину диапазона; для Attack Speed это +45%, для Crit Chance +105%.",
+          "Strength multipliers: Common 1; Uncommon 1.12; Rare 1.35; Mythic 1.75. Rarity scales qi before saturation; it does not multiply the whole bonus including its floor. At qi = 80 and Common, the value is the midpoint: +45% Attack Speed or +105% Crit Chance."
+        ],
+        [
+          "p — вероятность попадания в ветку Rare/Mythic, а не непосредственно Mythic. Без гарантий шанс Mythic = p × clamp(0.16p,0.01,0.12). При L = 125 p ≈ 21.66%, Mythic ≈ 0.75%; даже на бесконечном Lineage p стремится к 48%.",
+          "p is the chance of entering the Rare/Mythic branch, not the direct Mythic chance. Without guarantees, Mythic chance = p × clamp(0.16p,0.01,0.12). At L = 125, p ≈ 21.66% and Mythic ≈ 0.75%; even at infinite Lineage, p approaches 48%."
+        ]
+      ],
+      "formulas": [
+        "p = 0.48 × (1 − exp(−depth/5))\nP(Mythic | Rare branch) = clamp(0.16p, 0.01, 0.12)\nP(Uncommon | other branch) = clamp(0.12 + 0.35p, 0.12, 0.28)\nx = qi × m\nvalue = minimum + (maximum−minimum) × x/(x+80)",
+        "p = 0.48 × (1 − exp(−depth/5))\nP(Mythic | Rare branch) = clamp(0.16p, 0.01, 0.12)\nP(Uncommon | other branch) = clamp(0.12 + 0.35p, 0.12, 0.28)\nx = qi × m\nvalue = minimum + (maximum−minimum) × x/(x+80)"
+      ],
+      "table": {
+        "headers": [
+          [
+            "Аффикс",
+            "Affix"
+          ],
+          [
+            "Один ролл: min → предел",
+            "One roll: min → limit"
+          ],
+          [
+            "Общий предел / область",
+            "Total cap / scope"
+          ]
+        ],
+        "rows": [
+          [
+            [
+              "Скорость атаки",
+              "Attack Speed"
+            ],
+            "+15% → +75%",
+            [
+              "×3.5 до Haste; глобально",
+              "×3.5 before Haste; global"
+            ]
+          ],
+          [
+            [
+              "Крит-шанс",
+              "Crit Chance"
+            ],
+            "+10% → +200%",
+            [
+              "200% от одной вещи; суммы всех вещей не ограничены 200%",
+              "200% per item; total across items is not capped at 200%"
+            ]
+          ],
+          [
+            [
+              "Крит-множитель",
+              "Crit Multiplier"
+            ],
+            "+0.35 → +1.5",
+            [
+              "Оружие: локально; орб: глобально",
+              "Weapon: local; Orb: global"
+            ]
+          ],
+          [
+            [
+              "Лайфстил",
+              "Lifesteal"
+            ],
+            "8% → 100%",
+            [
+              "400% суммарно; глобально",
+              "400% total; global"
+            ]
+          ],
+          [
+            [
+              "Стан",
+              "Stun"
+            ],
+            "8% → 30%",
+            [
+              "85% на оружии, 1.1 с",
+              "85% per weapon, 1.1 s"
+            ]
+          ],
+          [
+            [
+              "Блок",
+              "Block"
+            ],
+            "8% → 30%",
+            [
+              "85% на мили-оружии; поглощает Raw этой вещи",
+              "85% per melee weapon; absorbs that weapon’s Raw"
+            ]
+          ],
+          [
+            [
+              "КД дэша",
+              "Dash CD"
+            ],
+            [
+              "−15% → −35%",
+              "−15% → −35%"
+            ],
+            [
+              "−80% суммарно до баффа",
+              "−80% total before buff"
+            ]
+          ],
+          [
+            [
+              "Дистанция дэша",
+              "Dash Distance"
+            ],
+            "+25% → +75%",
+            [
+              "×2.5 суммарно до баффа",
+              "×2.5 total before buff"
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "title": [
+        "Яд, процентные HP и Greed — другие формулы",
+        "Poison, percentage HP, and Greed use different formulas"
+      ],
+      "wide": true,
+      "paragraphs": [
+        [
+          "Яд, %HP и %реген — линейные функции qi, без насыщения и без общего верхнего капа в текущем пути расчёта. Старые поля poisonMaximum… в конфиге здесь не применяются. При qi = 80, Rare: яд = 89.8% прямого попадания; каждый из двух процентных HP/реген-аффиксов = +212%.",
+          "Poison, %HP, and %regen are linear in qi, without saturation or an aggregate upper cap in the current calculation path. Old poisonMaximum… configuration fields are not applied here. At qi = 80, Rare: poison is 89.8% of the direct hit; either percentage HP/regen affix grants +212%."
+        ],
+        [
+          "Новое отравление прибавляет оставшийся урон к одному пулу и выставляет оставшееся время равным большему из старого и нового. Это не набор независимых DoT с отдельными часами. Номинальный срок нового яда 2–7 с; за dt выплачивается remainingDamage × dt / remainingTime (dt не больше remainingTime).",
+          "New poison adds damage to one remaining pool and sets remaining time to the greater of the old and new durations. These are not independent DoTs with separate clocks. A new poison lasts 2–7 s nominally; each dt deals remainingDamage × dt / remainingTime, with dt bounded by remainingTime."
+        ],
+        [
+          "Greed-аффикс зависит только от Lineage. Fractional Greed не даёт дробной вещи или случайного округления: g = 1.99 даёт одну копию, g = 2 — две. Обычные постоянные награды масштабируются g; процентные HP/Greed-награды исключены.",
+          "The Greed affix depends only on Lineage. Fractional Greed does not grant fractional copies or probabilistic rounding: g = 1.99 gives one copy, g = 2 gives two. Ordinary permanent rewards scale by g; percentage HP/Greed rewards are excluded."
+        ]
+      ],
+      "formulas": [
+        "poisonRatio_per_affix = 0.25 + 0.006 × qi × m\nHPPercent_or_RegenPercent = 0.5 + 0.015 × qi × m\nPoison_per_hit = flatPoison + actualDirectHit × ΣpoisonRatio\nGreed_per_item = clamp(L/20000,0,1)\ng = max(1, permanentGreedMultiplier + ΣGreed_per_item)\nDropCopies = max(1, floor(g + 1e−9))",
+        "poisonRatio_per_affix = 0.25 + 0.006 × qi × m\nHPPercent_or_RegenPercent = 0.5 + 0.015 × qi × m\nPoison_per_hit = flatPoison + actualDirectHit × ΣpoisonRatio\nGreed_per_item = clamp(L/20000,0,1)\ng = max(1, permanentGreedMultiplier + ΣGreed_per_item)\nDropCopies = max(1, floor(g + 1e−9))"
+      ]
+    },
+    {
+      "title": [
+        "Плоские аффиксы и рейтинги",
+        "Flat affixes and ratings"
+      ],
+      "wide": true,
+      "paragraphs": [
+        [
+          "Плоские HP, реген, Class Power и рейтинги не имеют простой общей формулы «qi × константа». Их NativeReference привязан к ожидаемому заработку: экономика выбирает первую локацию, где расчётный Lineage за предыдущие полные зачистки плюс 30 минут фарма достигает L; справочник затем даёт эталон соответствующего стата. Поэтому одинаковый qi разных типов — не одинаковое число статов.",
+          "Flat HP, regen, Class Power, and ratings do not share a simple qi × constant rule. Their NativeReference depends on expected earnings: the economic reference is the first location where estimated Lineage from previous full clears plus 30 minutes of farming reaches L; the reference model then supplies that stat’s baseline. Equal qi in different affix types does not imply equal stat amounts."
+        ],
+        [
+          "QexpectedWeapon — средний оружейный бюджет даже для орба. expectedCount = (nmin+nmax)/2. Множитель редкости здесь применяется после share. Для старых мигрированных предметов может дополнительно сохраняться valueCalibration.",
+          "QexpectedWeapon is the mean weapon budget even for an Orb. expectedCount = (nmin+nmax)/2. Rarity is applied after share here. Legacy migrated items may additionally retain valueCalibration."
+        ],
+        [
+          "В формулах рейтинга r — суммарный рейтинг, а Kstat = max(1, ожидаемый основной заработок этого рейтинга в секунду на локации 13 × 180 часов). Это второй, поздний порог, а не K оружейного урона. Awareness меняет дальность обнаружения/атаки, не зум камеры.",
+          "In rating formulas, r is the total rating and Kstat = max(1, expected primary income per second for that rating at location 13 × 180 hours). This is a second, late progression knee, not the weapon damage K. Awareness affects detection/attack range, not camera zoom."
+        ]
+      ],
+      "formulas": [
+        "maturity = min(2, 1 + 0.25 × log2(1+depth))\nconcentration = qi / (QexpectedWeapon / expectedCount)\nshare = clamp(0.065 × maturity × concentration^0.8, 0.005, 0.35)\nFlatAffix = NativeReference × share × m\nMoveMultiplier = 1 + 1.5r/(r+120) + 3r/(r+Kmove)\nEvasionStat = 0.6r/(r+360) + 0.15r/(r+Kevade)\nAwarenessMultiplier = 1 + 0.15r/(r+120) + 0.5r/(r+Kaware)\nCoverageBonus = 4r/(r+8) + 8r/(r+Kcoverage)",
+        "maturity = min(2, 1 + 0.25 × log2(1+depth))\nconcentration = qi / (QexpectedWeapon / expectedCount)\nshare = clamp(0.065 × maturity × concentration^0.8, 0.005, 0.35)\nFlatAffix = NativeReference × share × m\nMoveMultiplier = 1 + 1.5r/(r+120) + 3r/(r+Kmove)\nEvasionStat = 0.6r/(r+360) + 0.15r/(r+Kevade)\nAwarenessMultiplier = 1 + 0.15r/(r+120) + 0.5r/(r+Kaware)\nCoverageBonus = 4r/(r+8) + 8r/(r+Kcoverage)"
+      ]
+    },
+    {
+      "title": [
+        "Живучесть: порядок обработки входящего удара",
+        "Survival: incoming damage order"
+      ],
+      "wide": true,
+      "paragraphs": [
+        [
+          "Порядок: проверка safe zone → уклонение → независимые блоки каждого мили-оружия → поглощение щитом → HP → Second Life при летальном ударе. Блок — не полный иммунитет: каждый успешный слот вычитает свой Raw. Два успешных блока с Raw 100 и 150 от удара 1000 оставят 750 до щита.",
+          "Order: safe-zone check → evasion → independent blocks from each melee weapon → shield absorption → HP → Second Life on a lethal hit. Block is not full immunity: each successful slot subtracts its Raw. Two successful blocks with Raw 100 and 150 against a 1000 hit leave 750 before Shield."
+        ],
+        [
+          "Уклонение от конкретной атаки дополнительно делится на 1 + 0.12 × sourceDifficulty из её payload. Это не отношение HP врага к HP игрока. Суммарный HP-множитель усиливает и базовый реген; отдельный %реген умножается после него.",
+          "Evasion against a particular attack is additionally divided by 1 + 0.12 × sourceDifficulty from its payload. This is not an enemy-to-player HP ratio. The total HP multiplier also boosts base regen; the separate %regen multiplier applies afterwards."
+        ],
+        [
+          "Для sourceDifficulty индексы тиров: Regular 0, Elite 1, Minor Boss 2, Gate Boss 3, Fortress Boss 4. Поэтому рост HP/тира атакующего снижает фактическое уклонение даже при неизменном рейтинге персонажа.",
+          "For sourceDifficulty, tier indices are Regular 0, Elite 1, Minor Boss 2, Gate Boss 3, Fortress Boss 4. Attacker HP/tier growth therefore reduces actual evasion even at an unchanged character rating."
+        ]
+      ],
+      "formulas": [
+        "HPmult = max(0.01, 1 + permanentHPPercent + ΣgearHPPercent)\nMaxHP = (permanentFlatHP + ΣgearFlatHP) × HPmult\nRegen/s = (permanentRegen + ΣgearFlatRegen) × HPmult × max(0.01,1+ΣgearRegenPercent)\nsourceDifficulty = log10(max(1,enemyMaxHP)) + 2 × enemyTierIndex\nP(evade_hit) = clamp(EvasionStat/(1+0.12×sourceDifficulty),0,0.85)\nP(block_slot) = min(0.85, innate + localBlock + globalOrbBlock)\ninnate = min(1, 0.07 + 0.005 × log5(max(1,L)))\nAfterBlocks = max(0, incomingDamage − Σ successfulMeleeSlotRaw)\nLifestealHeal = reportedDamageDealt × min(4,Σlifesteal)",
+        "HPmult = max(0.01, 1 + permanentHPPercent + ΣgearHPPercent)\nMaxHP = (permanentFlatHP + ΣgearFlatHP) × HPmult\nRegen/s = (permanentRegen + ΣgearFlatRegen) × HPmult × max(0.01,1+ΣgearRegenPercent)\nsourceDifficulty = log10(max(1,enemyMaxHP)) + 2 × enemyTierIndex\nP(evade_hit) = clamp(EvasionStat/(1+0.12×sourceDifficulty),0,0.85)\nP(block_slot) = min(0.85, innate + localBlock + globalOrbBlock)\ninnate = min(1, 0.07 + 0.005 × log5(max(1,L)))\nAfterBlocks = max(0, incomingDamage − Σ successfulMeleeSlotRaw)\nLifestealHeal = reportedDamageDealt × min(4,Σlifesteal)"
+      ]
+    },
+    {
+      "title": [
+        "Reforge: веса, а не гарантии",
+        "Reforge: weights, not guarantees"
+      ],
+      "wide": true,
+      "paragraphs": [
+        [
+          "Аффиксы выбираются из разрешённого пула без повторов. Средний bias взвешивается по Lineage катализаторов: большая масса влияет сильнее одной серой вещи. Единственный ролленный предмет в no-base Reforge с серыми ингредиентами задаёт базу и массу, но исключён из bias. Чистый катализатор с bias 3 даёт ×4 к весу соответствующего аффикса; это не 4-кратный итоговый шанс, потому что меняются веса конкурентов.",
+          "Affixes are selected without duplicates from the allowed pool. Mean bias is weighted by catalyst Lineage: a large mass contributes more than one grey item. The single rolled item in a no-base Reforge with grey ingredients determines base and mass but is excluded from bias. A pure catalyst with bias 3 gives ×4 to the relevant affix weight; this is not a fourfold final probability, because competing weights change too."
+        ],
+        [
+          "Это влияние состава относится к Reforge аффиксов. В Pattern Forge текущий RollNode считает параметры из полноты рисунка, полного Lineage базы после добавления ингредиентов и случайного ролла. Состав записывается, но не даёт отдельного бонуса к radius/count/retention; исключение — выбор Aura payload по самому тяжёлому вкладу: кинжал Thorns, молот Stun, иначе Knockback.",
+          "Composition bias belongs to affix Reforge. In Pattern Forge, current RollNode parameters depend on pattern completeness, the base’s total Lineage after adding ingredients, and randomness. Composition is recorded but adds no separate radius/count/retention bonus; the exception is Aura payload selection from the heaviest contribution: Dagger gives Thorns, Hammer Stun, otherwise Knockback."
+        ],
+        [
+          "В таблице указаны множители для чистого состава катализаторов. Неуказанные свойства имеют bias 0 (×1); недопустимый для базы аффикс не появится независимо от bias. Ванд использует отдельную систему.",
+          "Table multipliers assume a pure catalyst composition. Unlisted properties have bias 0 (×1); a forbidden affix cannot appear regardless of bias. Wands use a separate system."
+        ]
+      ],
+      "formulas": [
+        "meanBias(kind) = Σ[catalystLineage × bias(base,kind)] / ΣcatalystLineage\nweightEffective = max(0.001, baseWeight × clamp(1+meanBias,0.25,4.5))\nP(next affix) = weightEffective / Σ remainingWeights",
+        "meanBias(kind) = Σ[catalystLineage × bias(base,kind)] / ΣcatalystLineage\nweightEffective = max(0.001, baseWeight × clamp(1+meanBias,0.25,4.5))\nP(next affix) = weightEffective / Σ remainingWeights"
+      ],
+      "table": {
+        "headers": [
+          [
+            "Катализатор",
+            "Catalyst"
+          ],
+          "bias 3 (×4)",
+          "bias 2 (×3)",
+          "bias 1 (×2)"
+        ],
+        "rows": [
+          [
+            [
+              "Кинжал",
+              "Dagger"
+            ],
+            "Dash CD, Dash Distance, Attack Speed, Poison, Crit Chance",
+            "HP%, Regen%, Lifesteal, Move, Evasion",
+            "Melee"
+          ],
+          [
+            [
+              "Меч",
+              "Sword"
+            ],
+            "Dash CD, Dash Distance, HP%, Regen%, Melee, Crit Multiplier, Block",
+            "Crit Chance, Lifesteal, HP",
+            "Attack Speed, Move"
+          ],
+          [
+            [
+              "Молот",
+              "Hammer"
+            ],
+            "Dash CD, Dash Distance, HP%, Regen%, HP, Block, Stun",
+            "Melee, Regen, Crit Multiplier",
+            "Lifesteal"
+          ],
+          [
+            [
+              "Лук",
+              "Bow"
+            ],
+            "Ranged, Coverage, Crit Chance",
+            "Attack Speed, Awareness, Evasion",
+            "Move, Greed"
+          ],
+          [
+            [
+              "Посох",
+              "Staff"
+            ],
+            "Magic, Crit Multiplier, Awareness",
+            "Coverage, Regen, Poison",
+            "Stun, Greed"
+          ],
+          [
+            [
+              "Орб",
+              "Orb"
+            ],
+            "Regen, Greed, Awareness",
+            "HP, Move, Evasion",
+            "Attack Speed, Lifesteal"
+          ]
+        ]
+      }
+    },
+    {
+      "title": [
+        "Pattern Forge: полнота формы и параметры узла",
+        "Pattern Forge: completeness and node parameters"
+      ],
+      "wide": true,
+      "paragraphs": [
+        [
+          "R/O — число обязательных/опциональных клеток выбранного шаблона; r/o — сколько из них занято; e — занятые лишние клетки. База сама по себе не катализатор. Лучший шаблон признаётся при S ≥ 0.62. При равенстве приоритет Aura → Split → Wall → Cone → Burst → Redirect → Drive. Количество вещей в клетке увеличивает Lineage, но не число занятых клеток.",
+          "R/O are the required/optional cell counts of a candidate template; r/o are the occupied counts; e is the number of occupied extra cells. The base itself is not a catalyst. The best pattern is recognized at S ≥ 0.62. Ties prioritize Aura → Split → Wall → Cone → Burst → Redirect → Drive. Item quantity in a cell adds Lineage but does not add occupied cells."
+        ],
+        [
+          "Fork/Split без опциональной клетки: S = 10/11; Wall: 7/8; Aura с четырьмя обязательными, без опциональных: 13/17. Ltotal включает базу и все съеденные ингредиенты. Для S = 1, Ltotal = 1000 и среднего ролла U = 1: q = 1.6, retention = 60.6%, count = 1, radius = 2.248, range = 3.72, duration = 1.852 с.",
+          "Fork/Split without its optional cell: S = 10/11; Wall: 7/8; Aura with four required cells and no optional cells: 13/17. Ltotal includes the base and all consumed ingredients. At S = 1, Ltotal = 1000 and midpoint roll U = 1: q = 1.6, retention = 60.6%, count = 1, radius = 2.248, range = 3.72, duration = 1.852 s."
+        ],
+        [
+          "power = q — параметр качества узла, не универсальный множитель белого урона. Повторная Aura объединяет параметры как max(old,new) + 0.2 × min(old,new), поэтому сохранённый параметр может превысить кап одиночного ролла; ограничения конкретного боевого эффекта всё равно остаются.",
+          "power = q is a node quality parameter, not a universal white-damage multiplier. Reapplying Aura merges parameters as max(old,new) + 0.2 × min(old,new), so a saved parameter may exceed its single-roll cap; effect-specific runtime bounds still apply."
+        ]
+      ],
+      "formulas": [
+        "S = clamp((3r − 4(R−r) + o − 0.75e + completeRequiredBonus)/(3R+O+1),0,1)\ncompleteRequiredBonus = 1 if r=R, otherwise 0\nq = max(0.25,S) × (1+0.2×log10(max(1,Ltotal))) × U(0.9,1.1)\nretention = clamp(0.55+0.035q,0.55,0.95)\ncount = clamp(floor(1+0.45q),1,8)\nradius = clamp(1.8+0.28q,1.8,9)\nrange = clamp(3+0.45q,3,14)\nduration = clamp(1.5+0.22q,1.5,10)",
+        "S = clamp((3r − 4(R−r) + o − 0.75e + completeRequiredBonus)/(3R+O+1),0,1)\ncompleteRequiredBonus = 1 if r=R, otherwise 0\nq = max(0.25,S) × (1+0.2×log10(max(1,Ltotal))) × U(0.9,1.1)\nretention = clamp(0.55+0.035q,0.55,0.95)\ncount = clamp(floor(1+0.45q),1,8)\nradius = clamp(1.8+0.28q,1.8,9)\nrange = clamp(3+0.45q,3,14)\nduration = clamp(1.5+0.22q,1.5,10)"
+      ]
+    },
+    {
+      "title": [
+        "Цепочки: затухание, геометрия и бюджет",
+        "Chains: attenuation, geometry, and budget"
+      ],
+      "wide": true,
+      "paragraphs": [
+        [
+          "Split всегда сохраняет 70% урона каждой ветки; Wall и Cone — 20%. Эти три коэффициента заменяют rolled retention, а не умножаются на него. Остальные продолжающие узлы используют свой retention, ограниченный в бою диапазоном 0.1…1. Порядок умножений важен: 100 → Split → Wall даёт 14 каждой конечной ветке, а не суммарно всей площади.",
+          "Split always retains 70% damage per branch; Wall and Cone retain 20%. These three coefficients replace rolled retention rather than multiplying by it. Other continuing nodes use their retention, clamped to 0.1…1 in combat. Multipliers compose: 100 → Split → Wall yields 14 per final branch, not 14 across the whole area."
+        ],
+        [
+          "Мили-волна: первая цель depth 0 получает полный удар, следующий слой 85%, следующий 72.25%. Это соседство целей, а не гарантированное количество поражённых мобов. Узлы Split/Wall/Cone на мили имеют половинный range. У лука Drive count означает дополнительных врагов; у орба Pierce проверяет контакты на реально пройденном дэше, не стреляет за его конец.",
+          "Melee wave: the initial target at depth 0 takes the full hit, the next layer 85%, then 72.25%. This describes target adjacency, not a guaranteed enemy count. Melee Split/Wall/Cone use half range. Bow Drive count means additional enemies; Orb Pierce checks contacts on the actual dash path and does not hit beyond it."
+        ],
+        [
+          "Максимум 8 узлов на вещи. Одна цепочка делит бюджет 128 снарядов, 128 hit events, 32 redirects и 32 area queries между всеми ветвями. Это предел одной цепочки, не обещание 128 попаданий и не глобальный лимит всех снарядов игры. Поэтому комбинаторный рост в итоге упирается в бюджет.",
+          "An item supports at most 8 nodes. One chain shares 128 projectiles, 128 hit events, 32 redirects, and 32 area queries across all branches. These are per-chain ceilings, not a promise of 128 hits or a global game projectile limit. Combinatorial growth eventually reaches a shared budget."
+        ],
+        [
+          "Aura тикает раз в 0.55 с. Staff Wall использует фактическую длительность clamp(duration,3,5), даже если сохранённый параметр короче или длиннее. Burst посоха расширяется за clamp(0.34 + radius × 0.035,0.38,0.72) с.",
+          "Aura ticks every 0.55 s. Staff Wall uses actual duration clamp(duration,3,5), even if the saved parameter is shorter or longer. Staff Burst expands over clamp(0.34 + radius × 0.035,0.38,0.72) s."
+        ]
+      ],
+      "formulas": [
+        "MeleeWaveDamage(depth) = initialHit × 0.85^depth\nWallHalfWidth = range/2.5; fullWidth = 0.8 × range\nAuraRadius = max(0.35,carrierRadius) × 1.75 × clamp(rolledRadius/3,1,3)",
+        "MeleeWaveDamage(depth) = initialHit × 0.85^depth\nWallHalfWidth = range/2.5; fullWidth = 0.8 × range\nAuraRadius = max(0.35,carrierRadius) × 1.75 × clamp(rolledRadius/3,1,3)"
+      ]
+    },
+    {
+      "title": [
+        "Ванды: все коэффициенты поддержки",
+        "Wands: support coefficients"
+      ],
+      "wide": true,
+      "paragraphs": [
+        [
+          "Potency и Quickening суммируются по своим аффиксам, с новым roll 0.85…1.15. P усиливает общий объём хила/HoT и щита; баффы на скорость, урон и дэш используют переданную potency, ограниченную 1…2. Один и тот же активный тип баффа обновляется, а не складывается. У каждой вещи каждый эффект имеет собственный сохранённый КД.",
+          "Potency and Quickening sum their respective affixes, with fresh roll 0.85…1.15. P scales total Heal/HoT and Shield amounts; speed, damage, and dash buffs use transmitted potency clamped to 1…2. Active buffs of the same type refresh rather than stack. Every effect on every item owns its saved cooldown."
+        ],
+        [
+          "Обычный серый ванд: L = 1, P = 1, хил 12 HP раз в 3.5 с. HoT выдаёт свой общий объём за 12 с, а не этот объём на каждом тике. На первом пороге Second Life L = 3125 и P = 1 возвращает примерно 42.47% MaxHP; номинальный КД 300 с без Quickening, длительность страховки 45 с.",
+          "An ordinary grey Wand at L = 1 and P = 1 heals 12 HP every 3.5 s. HoT distributes its total amount over 12 s, rather than granting that amount every tick. At the first Second Life threshold, L = 3125 and P = 1 restores about 42.47% MaxHP; nominal CD is 300 s without Quickening and insurance lasts 45 s."
+        ],
+        [
+          "Пороги эффекта: хил 1; HoT/щит 5; Haste 25; Dash/Empower 125; Second Life 3125. Вторичные свойства: 1/2/3 при L 25/625/15625. Полный список длительностей и выбора цели — во вкладке Wand раздела кузни.",
+          "Effect thresholds: Heal 1; HoT/Shield 5; Haste 25; Dash/Empower 125; Second Life 3125. Secondary properties: 1/2/3 at L 25/625/15625. Full durations and targeting details are in the forge section’s Wand tab."
+        ]
+      ],
+      "formulas": [
+        "P = 1 + 0.2 × ΣPotencyRoll\nQ = min(0.5, 0.12 × ΣQuickeningRoll)\nHeal = HoT_total = 12 × L × P\nShieldCapacity = 16 × L × P\nCDordinary = BaseCD × (1−Q) × 0.5\nBaseCD: Heal 7; HoT 18; Shield 24; Dash 35; Haste 30; Empower 40\nt = clamp((log10(max(1,L))−log10(3125))/5,0,1)\nCDsecondLife = max(180, (600−420t) × (1−Q)) × 0.5\nResHPFraction = clamp(0.25+0.05×log10(max(1,L))×P,0.25,0.90)\nHasteMoveAndAS = 1 + 0.25 × buffPotency\nEmpowerDamage = 1 + 0.25 × buffPotency",
+        "P = 1 + 0.2 × ΣPotencyRoll\nQ = min(0.5, 0.12 × ΣQuickeningRoll)\nHeal = HoT_total = 12 × L × P\nShieldCapacity = 16 × L × P\nCDordinary = BaseCD × (1−Q) × 0.5\nBaseCD: Heal 7; HoT 18; Shield 24; Dash 35; Haste 30; Empower 40\nt = clamp((log10(max(1,L))−log10(3125))/5,0,1)\nCDsecondLife = max(180, (600−420t) × (1−Q)) × 0.5\nResHPFraction = clamp(0.25+0.05×log10(max(1,L))×P,0.25,0.90)\nHasteMoveAndAS = 1 + 0.25 × buffPotency\nEmpowerDamage = 1 + 0.25 × buffPotency"
+      ]
+    },
+    {
+      "title": [
+        "Дэш и взаимодействие капов с саппортом",
+        "Dash and support interactions with caps"
+      ],
+      "wide": true,
+      "paragraphs": [
+        [
+          "Без шмота дэш длится 0.18 с, проходит 9.1 единицы, КД 4 с. При максимальном оборудовании: 22.75 единицы и 0.8 с. Бафф Dash с potency 1 после этого даёт 27.3 единицы и 0.64 с: ограничение экипа не является финальным пределом баффнутого персонажа.",
+          "Without gear, dash lasts 0.18 s, travels 9.1 units, and has a 4 s cooldown. Maximum gear gives 22.75 units and 0.8 s. A potency-1 Dash buff then gives 27.3 units and 0.64 s: the equipment cap is not the final buffed character limit."
+        ],
+        [
+          "Аналогично Haste potency 1 превращает кап ×3.5 Attack Speed в ×4.375. Бонусы одной категории на экипе обычно суммируются, затем применяется кап, затем отдельный множитель активного баффа. Контакты/стены могут обрезать фактический путь дэша.",
+          "Likewise, potency-1 Haste turns the ×3.5 Attack Speed cap into ×4.375. Gear bonuses in the same category usually add, then the cap applies, then a separate active-buff multiplier applies. Contacts and walls can shorten actual dash travel."
+        ]
+      ],
+      "formulas": [
+        "CDgear = max(0.35, 4 × (1−clamp(ΣdashReduction,0,0.8)))\nDistanceGear = 9.1 × (1+clamp(ΣdistanceBonus,0,1.5))\nCDbuffed = CDgear × max(0.5,1−0.2×buffPotency)\nDistanceBuffed = DistanceGear × (1+0.2×buffPotency)\nAttackSpeedFinal = min(3.5, permanentAttackSpeed + ΣgearAS) × HasteMultiplier",
+        "CDgear = max(0.35, 4 × (1−clamp(ΣdashReduction,0,0.8)))\nDistanceGear = 9.1 × (1+clamp(ΣdistanceBonus,0,1.5))\nCDbuffed = CDgear × max(0.5,1−0.2×buffPotency)\nDistanceBuffed = DistanceGear × (1+0.2×buffPotency)\nAttackSpeedFinal = min(3.5, permanentAttackSpeed + ΣgearAS) × HasteMultiplier"
+      ]
+    },
+    {
+      "title": [
+        "Практические выводы для сборки",
+        "Practical build implications"
+      ],
+      "wide": true,
+      "paragraphs": [
+        [
+          "Сильный постоянный Class Power повышает ценность частых атак; большой Lineage и стабильный damage roll повышают белый урон самой вещи. Крит-шанс выше 100% продолжает работать, но скорость атаки экипа после ×3.5 уже не ускоряет атаки без отдельного Haste.",
+          "Strong permanent Class Power increases the value of frequent attacks; high Lineage and a strong stable damage roll improve the item’s own damage. Crit chance above 100% keeps working, but gear Attack Speed above ×3.5 does not accelerate attacks without separate Haste."
+        ],
+        [
+          "Больше аффиксов распределяет один Qtotal на большее число долей: это ширина билда, не бесплатное усиление каждого свойства. Temper кормит удачный профиль; Reforge меняет профиль ценой потери старой цепочки. Для целевого редкого аффикса оценивай и допустимый пул базы, и массовый bias ингредиентов.",
+          "More affixes spread one Qtotal across more shares: this gives build breadth rather than free strength for every affix. Temper feeds a good profile; Reforge changes it at the cost of the old chain. For a target rare affix, consider both the base’s allowed pool and ingredient mass bias."
+        ],
+        [
+          "Не сравнивай Wall-билд с обычным оружием только по нейтральному DPS: полезность зависит от контактов, плотности пачки, времени жизни поля и бюджета цепочки. И не путай потенциальный урон яда с реально успевшим пройти до смерти цели.",
+          "Do not compare a Wall build with a plain weapon using neutral DPS alone: value depends on contacts, pack density, field lifetime, and chain budget. Do not confuse potential poison damage with the damage actually delivered before the target dies."
+        ]
+      ]
+    }
+  ],
+  "note": [
+    "Формулы сверены с GameBalance.asset и исполняемыми путями расчёта. Для полноценного внешнего симулятора экономики смотри ProgressionMath и EquipmentProgressionReference из списка источников: NativeReference и G13 — расчётные функции, не скрытые ручные константы.",
+    "Formulas were checked against GameBalance.asset and executed calculation paths. For a complete external economy simulator, consult ProgressionMath and EquipmentProgressionReference in the source list: NativeReference and G13 are calculated functions, not hidden manually chosen constants."
+  ]
+});
   const sources = [
+    ["Assets/Resources/GameBalance.asset", "Числа текущего баланса", "Current balance values"],
+    ["Assets/Scripts/Core/GameBalanceConfig.cs", "Дополнение дефолтов и определения", "Default completion and definitions"],
+    ["Assets/Scripts/Core/ProgressionMath.cs", "Коэффициенты урона, крит и рейтинги", "Damage calibration, crit, and ratings"],
+    ["Assets/Scripts/Forge/EquipmentProgressionReference.cs", "Экономические эталоны плоских аффиксов", "Economic references for flat affixes"],
+    ["Assets/Scripts/Character/CharacterModel.cs", "Суммы статов, капы и DPS", "Stat aggregation, caps, and DPS"],
+    ["Assets/Scripts/AI/EnemyActor.cs", "Применение попаданий и яд", "Hit application and poison"],
     ['Assets/Scripts/UI/HUDController.cs','Интерфейс, встроенный хелп и подсказки','Interface, in-game help, and hints'],
     ['Assets/Scripts/Forge/RitualForgeService.cs','Рецепты, режимы и цепочки кузни','Recipes, forge modes, and chains'],
     ['Assets/Scripts/Forge/ForgeService.cs','Роллы, аффиксы и рост предметов','Rolls, affixes, and item growth'],
@@ -239,7 +876,7 @@
     try{history.replaceState(null,'',url)}catch{}
   }
   function renderTable(table){return `<div class="table-wrap"><table><thead><tr>${table.headers.map(h=>`<th scope="col">${txt(h)}</th>`).join('')}</tr></thead><tbody>${table.rows.map(row=>`<tr>${row.map(c=>`<td>${txt(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;}
-  function renderCard(c){return `<article class="card ${c.wide?'wide':''}"><h3>${txt(c.title)}</h3>${c.paragraphs.map(p=>`<p>${txt(p)}</p>`).join('')}</article>`;}
+  function renderCard(c){return `<article class="card ${c.wide?'wide':''}"><h3>${txt(c.title)}</h3>${c.paragraphs.map(p=>`<p>${txt(p)}</p>`).join('')}${c.formulas?`<pre class="formula"><code>${txt(c.formulas)}</code></pre>`:''}${c.table?renderTable(c.table):''}</article>`;}
   function recipeGrid(r){
     return `<div class="grid" role="img" aria-label="${txt(ui.recipeLabels)}: ${Array.from({length:9},(_,i)=>i===r.base?'B':r.required.includes(i)?'X':r.optional.includes(i)?'+':'.').join(' ')}">${Array.from({length:9},(_,i)=>{const cls=i===r.base?'base':r.required.includes(i)?'required':r.optional.includes(i)?'optional':'';return `<span class="cell ${cls}" aria-hidden="true">${i===r.base?'B':r.required.includes(i)?'X':r.optional.includes(i)?'+':'·'}</span>`}).join('')}</div>`;
   }
@@ -257,7 +894,7 @@
     document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===language)));
     const nav=sections.map((s,i)=>`<a href="#${s.id}">${String(i+1).padStart(2,'0')} · ${txt(s.title)}</a>`).join('');
     for(const id of ['desktop-nav','mobile-nav']){const el=document.getElementById(id);el.innerHTML=nav;el.setAttribute('aria-label',t(ui.contents));}
-    document.getElementById('guide').innerHTML=`<section class="hero" aria-labelledby="page-title"><span class="eyebrow">${txt(ui.eyebrow)}</span><h1 id="page-title">${txt(ui.title)}</h1><p>${txt(ui.intro)}</p><div class="hero-links"><a href="#start">${txt(ui.quick)}</a><a href="#craft-tabs">${txt(ui.forge)}</a><a href="https://www0z0k.github.io/ami-locals-web/stu-peasy-beta.html" target="_blank" rel="noopener">${txt(ui.play)}</a></div><p class="meta">${txt(ui.meta)}</p></section>${sections.map((s,i)=>`<section class="section" id="${s.id}" aria-labelledby="heading-${s.id}"><div class="section-head"><span class="section-number" aria-hidden="true">${String(i+1).padStart(2,'0')}</span><h2 id="heading-${s.id}">${txt(s.title)}</h2></div>${s.lead?`<p class="lead">${txt(s.lead)}</p>`:''}${s.cards?`<div class="cards">${s.cards.map(renderCard).join('')}</div>`:''}${s.table?renderTable(s.table):''}${s.note?`<div class="callout">${txt(s.note)}</div>`:''}${s.id==='forge'?renderCraft():''}${s.faq?s.faq.map(f=>`<details><summary>${txt(f.q)}</summary><p>${txt(f.a)}</p></details>`).join(''):''}</section>`).join('')}<section class="section" id="sources"><h2>${txt(['Откуда взяты правила','Where the rules come from'])}</h2><p class="lead">${txt(['При обновлении баланса этот хелп нужно сверять с реализацией. Источники ниже — файлы проекта, не внешние ссылки.','When balance changes, this guide should be checked against implementation. The sources below are project files, not external links.'])}</p><ul class="source-list">${sources.map(s=>`<li><code>${escapeHtml(s[0])}</code> — ${escapeHtml(s[langIndex()+1])}</li>`).join('')}</ul></section><footer class="footer"><p>${txt(ui.footer)}</p><p>${txt(ui.fullPrint)}</p><a class="top-link" href="#top">${txt(ui.back)}</a></footer>`;
+    document.getElementById('guide').innerHTML=`<section class="hero" aria-labelledby="page-title"><span class="eyebrow">${txt(ui.eyebrow)}</span><h1 id="page-title">${txt(ui.title)}</h1><p>${txt(ui.intro)}</p><div class="hero-links"><a href="#start">${txt(ui.quick)}</a><a href="#craft-tabs">${txt(ui.forge)}</a><a href="#theorycraft">${txt(['Цифры и формулы','Numbers and formulas'])}</a><a href="https://www0z0k.github.io/ami-locals-web/stu-peasy-beta.html" target="_blank" rel="noopener">${txt(ui.play)}</a></div><p class="meta">${txt(ui.meta)}</p></section>${sections.map((s,i)=>`<section class="section" id="${s.id}" aria-labelledby="heading-${s.id}"><div class="section-head"><span class="section-number" aria-hidden="true">${String(i+1).padStart(2,'0')}</span><h2 id="heading-${s.id}">${txt(s.title)}</h2></div>${s.lead?`<p class="lead">${txt(s.lead)}</p>`:''}${s.cards?`<div class="cards">${s.cards.map(renderCard).join('')}</div>`:''}${s.table?renderTable(s.table):''}${s.note?`<div class="callout">${txt(s.note)}</div>`:''}${s.id==='forge'?renderCraft():''}${s.faq?s.faq.map(f=>`<details><summary>${txt(f.q)}</summary><p>${txt(f.a)}</p></details>`).join(''):''}</section>`).join('')}<section class="section" id="sources"><h2>${txt(['Откуда взяты правила','Where the rules come from'])}</h2><p class="lead">${txt(['При обновлении баланса этот хелп нужно сверять с реализацией. Источники ниже — файлы проекта, не внешние ссылки.','When balance changes, this guide should be checked against implementation. The sources below are project files, not external links.'])}</p><ul class="source-list">${sources.map(s=>`<li><code>${escapeHtml(s[0])}</code> — ${escapeHtml(s[langIndex()+1])}</li>`).join('')}</ul></section><footer class="footer"><p>${txt(ui.footer)}</p><p>${txt(ui.fullPrint)}</p><a class="top-link" href="#top">${txt(ui.back)}</a></footer>`;
     bindTabs();observeSections();
   }
   function selectWeapon(id,focus=false){
